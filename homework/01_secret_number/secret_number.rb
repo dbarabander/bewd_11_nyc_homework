@@ -36,3 +36,33 @@
 #
 ###############################################################################
 
+counter = 0
+puts "Welcome to the secret number guessing game. My name is Daniel Barabander, and I'm going to be your host!"
+puts "Can I start by taking your name?:"
+name = gets.chomp
+puts "Welcome, #{name}!"
+puts "Please guess a number between 1 and 10. You have 3 tries to do so"
+guessNumber = gets.to_i
+secretNumber = Random.rand(10-1)
+
+def getnum()
+	counter = counter + 1
+	guessNumber = gets.chomp.to_i
+	return guessNumber
+end
+
+getnum
+
+
+if guessNumber != secretNumber && counter <=3 
+		puts "Try again!"
+		getnum
+else
+		puts "Congrats! You guessed the secret number of #{secretNumber}" 
+end
+
+#FOR EACH!!!!!
+
+
+
+
